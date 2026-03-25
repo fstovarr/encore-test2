@@ -31,7 +31,7 @@ jobs:
         run: bash install.sh
 
       - name: Build Docker image
-        run: /home/runner/.encore/bin/encore build docker encore-test-app
+        run: /home/runner/.encore/bin/encore build docker myapp
 
       - name: Tag Docker image
         run: docker tag myapp ghcr.io/${{ github.repository }}:latest
