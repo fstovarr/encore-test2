@@ -1,8 +1,10 @@
 {
   "name": "encore-test",
   "version": "1.0.0",
+  "packageManager": "pnpm@10.7.0",
   "main": "index.js",
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "dev": "dotenv -e .env -- encore run",
     "db:generate": "dotenv -e .env -- drizzle-kit generate",
     "db:migrate": "dotenv -e .env -- drizzle-kit migrate",
@@ -15,8 +17,10 @@
   "description": "",
   "dependencies": {
     "@neondatabase/serverless": "^1.0.2",
+    "@t3-oss/env-core": "^0.13.11",
     "drizzle-orm": "^0.45.1",
-    "encore.dev": "^1.56.0"
+    "encore.dev": "^1.56.0",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
     "dotenv-cli": "^11.0.0",
